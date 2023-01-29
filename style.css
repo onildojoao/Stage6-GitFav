@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: #000000;
+  --bg-header: #043444;
+  --bg-even: rgba(6, 22, 27, 0.5);
+  --bg-odd: #06181c;
+  --bg-add-btn: #065e7c;
+  --bg-add-btn-hover: #ffffff;
+  --bg-btn-remove: #f75a68;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+}
+
+body * {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+}
+.app {
+  width: 112rem;
+  height: 4.8rem;
+  margin: 11.5rem auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-wrapper {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.search-wrapper .input-search {
+  width: 46.2rem;
+  background-color: #06181c;
+  padding: 0 0.8rem;
+  border-radius: 5px;
+  border: none;
+
+  font-size: 2rem;
+}
+.search-wrapper placeholder {
+  padding: 1.6rem;
+}
+
+.search-wrapper button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  width: 17rem;
+  height: 4.8rem;
+  background-color: var(--bg-add-btn);
+  border-radius: 5px;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  line-height: 100%;
+
+  cursor: pointer;
+}
+
+.search-wrapper button:hover {
+  background-color: var(--bg-add-btn-hover);
+  color: var(--bg-add-btn);
+}
+
+.search-wrapper button:hover path {
+  fill: var(--bg-add-btn);
+}
+
+table {
+  margin-top: 8.7rem;
+  width: 100%;
+  border-collapse: collapse;
+
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table th {
+  background-color: var(--bg-header);
+  height: 6.4rem;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: left;
+  padding: 1.5rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+table th:last-child {
+  border-top-right-radius: 0.5rem;
+  width: 15rem;
+}
+
+table tr:nth-child(odd) {
+  background-color: var(--bg-odd);
+}
+
+table tr:nth-child(even) {
+  background-color: var(--bg-even);
+}
+
+table td {
+  text-align: left;
+  padding: 1.5rem;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+td .button-remove {
+  background: none;
+  border: none;
+  color: var(--bg-btn-remove);
+  font-weight: 700;
+  font-size: 2rem;
+  cursor: pointer;
+}
